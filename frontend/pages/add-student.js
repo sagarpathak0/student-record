@@ -81,7 +81,7 @@ export default function AddStudent() {
         formData.append('image', values.image);
       }
 
-      const res = await fetch('http://localhost:5000/students', {
+      const res = await fetch('https://student-record-api.vercel.app/students', {
         method: 'POST',
         body: formData,
       });

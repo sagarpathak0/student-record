@@ -11,7 +11,7 @@ export default function Dashboard() {
 
   // Fetch students from backend
   useEffect(() => {
-    fetch("http://localhost:5000/students")
+    fetch("https://student-record-api.vercel.app/students")
       .then((res) => res.json())
       .then((data) => setStudents(data))
       .catch((err) => console.error("Error fetching students:", err));
@@ -20,7 +20,7 @@ export default function Dashboard() {
   // Delete a student by ID
   const deleteStudent = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/students/${id}`, {
+      const res = await fetch(`https://student-record-api.vercel.app/students/${id}`, {
         method: "DELETE",
       });
       if (res.ok) {

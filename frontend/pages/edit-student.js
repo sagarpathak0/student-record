@@ -69,7 +69,7 @@ export default function EditStudent() {
     if (!id) return;
     const fetchStudent = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/students/${id}`);
+        const res = await fetch(`https://student-record-api.vercel.app/students/${id}`);
         if (res.ok) {
           const data = await res.json();
           setStudent(data);
@@ -101,7 +101,7 @@ export default function EditStudent() {
         formData.append('image', values.image);
       }
 
-      const res = await fetch(`http://localhost:5000/students/${id}`, {
+      const res = await fetch(`https://student-record-api.vercel.app/students/${id}`, {
         method: 'PUT',
         body: formData,
       });
