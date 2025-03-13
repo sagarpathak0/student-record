@@ -214,7 +214,7 @@ export default function AddStudent() {
               {/* Drag-and-Drop Style Image Upload */}
               <div>
                 <label htmlFor="image" className="block text-gray-700 font-semibold mb-2">
-                  Student's Photo
+                  Student&apos;s Photo
                 </label>
                 <div
                   // Real Drag-and-Drop event handlers
